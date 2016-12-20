@@ -1,0 +1,38 @@
+{% extends "VetaHomeworkBundle::layout.html.twig" %}
+
+{% block title %}VetaHomeworkBundle:User{% endblock %}
+
+{% block header %}
+    <div class="row">
+        <div class="col-lg-12">
+            {% include 'VetaHomeworkBundle:Site:navbar.html.twig' with {'active': 'user'} %}
+            <h2 class="jumbotron">All Users</h2>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        {% embed "VetaHomeworkBundle:Site:_partial.html.twig" %}
+            {% block left_block %}
+                <div class="list-group">
+                    {% if users is iterable %}
+                        {% for user in users %}
+                            <a href="{{ path('veta_homework_user_view', {'id': user.id}, false) }}" class="list-group-item" title="View this User">
+                                <h5>{{ user.login }}</h5>
+                                <p>{{ user.firstName }} {{ user.lastName }}</p>
+                                <p>{{ user.email }}</p>
+                            </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endblock %}
+            {% block right_block %}
+                {% if message is defined %}
+                    <div class="alert alert-warning" role="alert">  {{ "%that%: %this%"|replace({'%that%': "Message", '%this%': message}) }}</div>
+                {% endif %}
+            {% endblock %}
+        {% endembed %}
+    </div>
+{% endblock %}
+

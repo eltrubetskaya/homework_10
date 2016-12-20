@@ -1,0 +1,24 @@
+Veta\HomeworkBundle\Entity\Theme:
+    type: entity
+    repositoryClass: Veta\HomeworkBundle\Repository\ThemeRepository
+    table: theme
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        status:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

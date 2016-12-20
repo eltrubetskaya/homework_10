@@ -1,0 +1,89 @@
+Veta\HomeworkBundle\Entity\Post:
+    type: entity
+    repositoryClass: Veta\HomeworkBundle\Repository\PostRepository
+    table: post
+    indexes:
+        theme_id:
+            columns:
+                - theme_id
+        user_admin_id:
+            columns:
+                - user_admin_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        discription:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        text:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+        dateCreate:
+            type: datetime
+            nullable: false
+            column: date_create
+        status:
+            type: boolean
+            nullable: false
+    manyToMany:
+        tags:
+            targetEntity: Veta\HomeworkBundle\Entity\Tag
+            inversedBy: posts
+            joinTable:
+                name: posts_tags
+                joinColumns:
+                    post_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    tag_id:
+                        referencedColumnName: id
+            orphanRemoval: false
+    oneToMany:
+        comments:
+            targetEntity: Veta\HomeworkBundle\Entity\Comment
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: post
+            inversedBy: comments
+            joinColumns:
+                comments:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToOne:
+        theme:
+            targetEntity: Veta\HomeworkBundle\Entity\Theme
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            orphanRemoval: false
+        userAdmin:
+            targetEntity: UserAdmin
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                user_admin_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

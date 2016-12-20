@@ -1,0 +1,25 @@
+Veta\HomeworkBundle\Entity\Tag:
+    type: entity
+    repositoryClass: Veta\HomeworkBundle\Repository\TagRepository
+    table: tag
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+    manyToMany:
+        posts:
+            targetEntity: Veta\HomeworkBundle\Entity\Post
+            mappedBy: tags
+    lifecycleCallbacks: {  }

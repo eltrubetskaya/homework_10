@@ -1,0 +1,251 @@
+veta_homework_site:
+    path:     /
+    defaults: { _controller: VetaHomeworkBundle:Site:index }
+
+veta_homework_theme_index:
+    path:     /theme
+    defaults: { _controller: VetaHomeworkBundle:Theme:index }
+    methods: [GET]
+
+veta_homework_theme_create:
+    path:     /theme
+    defaults: { _controller: VetaHomeworkBundle:Theme:create }
+    methods: [POST]
+
+veta_homework_theme_view:
+    path:     /theme/{id}
+    defaults: { _controller: VetaHomeworkBundle:Theme:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_theme_edit:
+    path:     /theme/{id}
+    defaults: { _controller: VetaHomeworkBundle:Theme:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_theme_delete:
+    path:     /theme/{id}
+    defaults: { _controller: VetaHomeworkBundle:Theme:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+veta_homework_info_index:
+    path:     /info
+    defaults: { _controller: VetaHomeworkBundle:Info:index }
+    methods: [GET]
+
+veta_homework_info_create:
+    path:     /info
+    defaults: { _controller: VetaHomeworkBundle:Info:create }
+    methods: [POST]
+
+veta_homework_info_view:
+    path:     /info/{id}
+    defaults: { _controller: VetaHomeworkBundle:Info:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_info_edit:
+    path:     /info/{id}
+    defaults: { _controller: VetaHomeworkBundle:Info:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_info_delete:
+    path:     /info/{id}
+    defaults: { _controller: VetaHomeworkBundle:Info:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+veta_homework_privilege_index:
+    path:     /privilege
+    defaults: { _controller: VetaHomeworkBundle:Privilege:index }
+    methods: [GET]
+
+veta_homework_privilege_create:
+    path:     /privilege
+    defaults: { _controller: VetaHomeworkBundle:Privilege:create }
+    methods: [POST]
+
+veta_homework_privilege_view:
+    path:     /privilege/{id}
+    defaults: { _controller: VetaHomeworkBundle:Privilege:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_privilege_edit:
+    path:     /privilege/{id}
+    defaults: { _controller: VetaHomeworkBundle:Privilege:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_privilege_delete:
+    path:     /privilege/{id}
+    defaults: { _controller: VetaHomeworkBundle:Privilege:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+veta_homework_user_index:
+    path:     /user
+    defaults: { _controller: VetaHomeworkBundle:User:index }
+    methods: [GET]
+
+veta_homework_user_create:
+    path:     /user
+    defaults: { _controller: VetaHomeworkBundle:User:create }
+    methods: [POST]
+
+veta_homework_user_view:
+    path:     /user/{id}
+    defaults: { _controller: VetaHomeworkBundle:User:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_user_edit:
+    path:     /user/{id}
+    defaults: { _controller: VetaHomeworkBundle:User:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_user_delete:
+    path:     /user/{id}
+    defaults: { _controller: VetaHomeworkBundle:User:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+veta_homework_useradmin_index:
+    path:     /useradmin
+    defaults: { _controller: VetaHomeworkBundle:UserAdmin:index }
+    methods: [GET]
+
+veta_homework_useradmin_create:
+    path:     /useradmin
+    defaults: { _controller: VetaHomeworkBundle:UserAdmin:create }
+    methods: [POST]
+
+veta_homework_useradmin_view:
+    path:     /useradmin/{id}
+    defaults: { _controller: VetaHomeworkBundle:UserAdmin:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_useradmin_edit:
+    path:     /useradmin/{id}
+    defaults: { _controller: VetaHomeworkBundle:UserAdmin:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_useradmin_delete:
+    path:     /useradmin/{id}
+    defaults: { _controller: VetaHomeworkBundle:UserAdmin:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+veta_homework_post_index:
+    path:     /post
+    defaults: { _controller: VetaHomeworkBundle:Post:index }
+    methods: [GET]
+
+veta_homework_post_create:
+    path:     /post
+    defaults: { _controller: VetaHomeworkBundle:Post:create }
+    methods: [POST]
+
+veta_homework_post_view:
+    path:     /post/{id}
+    defaults: { _controller: VetaHomeworkBundle:Post:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_post_edit:
+    path:     /post/{id}
+    defaults: { _controller: VetaHomeworkBundle:Post:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_post_delete:
+    path:     /post/{id}
+    defaults: { _controller: VetaHomeworkBundle:Post:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+veta_homework_tag_index:
+    path:     /tag
+    defaults: { _controller: VetaHomeworkBundle:Tag:index }
+    methods: [GET]
+
+veta_homework_tag_create:
+    path:     /tag
+    defaults: { _controller: VetaHomeworkBundle:Tag:create }
+    methods: [POST]
+
+veta_homework_tag_view:
+    path:     /tag/{id}
+    defaults: { _controller: VetaHomeworkBundle:Tag:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_tag_edit:
+    path:     /tag/{id}
+    defaults: { _controller: VetaHomeworkBundle:Tag:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_tag_delete:
+    path:     /tag/{id}
+    defaults: { _controller: VetaHomeworkBundle:Tag:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+veta_homework_comment_index:
+    path:     /comment
+    defaults: { _controller: VetaHomeworkBundle:Comment:index }
+    methods: [GET]
+
+veta_homework_comment_create:
+    path:     /comment
+    defaults: { _controller: VetaHomeworkBundle:Comment:create }
+    methods: [POST]
+
+veta_homework_comment_view:
+    path:     /comment/{id}
+    defaults: { _controller: VetaHomeworkBundle:Comment:view }
+    methods: [GET]
+    requirements:
+        id: '\d+'
+
+veta_homework_comment_edit:
+    path:     /comment/{id}
+    defaults: { _controller: VetaHomeworkBundle:Comment:edit }
+    requirements:
+        id: '\d+'
+    methods: [PUT]
+
+veta_homework_comment_delete:
+    path:     /comment/{id}
+    defaults: { _controller: VetaHomeworkBundle:Comment:delete }
+    methods: [DELETE]
+    requirements:
+        id: '\d+'

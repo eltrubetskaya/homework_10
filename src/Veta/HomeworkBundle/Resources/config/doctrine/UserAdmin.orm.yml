@@ -1,0 +1,52 @@
+Veta\HomeworkBundle\Entity\UserAdmin:
+    type: entity
+    repositoryClass: Veta\HomeworkBundle\Repository\UserAdminRepository
+    table: user_admin
+    indexes:
+        privilege_id:
+            columns:
+                - privilege_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        login:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        pass:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        nickName:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+            column: nick_name
+        status:
+            type: boolean
+            nullable: false
+    manyToOne:
+        privilege:
+            targetEntity: Privilege
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                privilege_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
